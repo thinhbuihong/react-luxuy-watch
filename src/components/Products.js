@@ -3,6 +3,7 @@ import Product from './Product'
 import { fetchProducts } from '../actions/productsActions';
 import { connect } from 'react-redux';
 import Filter from './Filter';
+import Fade from 'react-reveal/Fade';
 
 class Products extends Component {
   componentDidMount() {
@@ -19,7 +20,9 @@ class Products extends Component {
           {
             products ? (
               products.map(product => (
-                <Product product={product} key={product._id}></Product>
+                <Fade bottom cascase={true} key={product._id}>
+                  <Product product={product}></Product>
+                </Fade>
               ))
             ) : (<div>Loading ...</div>)
           }

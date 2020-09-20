@@ -24,6 +24,13 @@ class Cart extends Component {
             {this.props.cart.map(item=>{
               return <CartItem item={item}></CartItem>
             })}
+
+            <tr>
+              <td colSpan="2"></td>
+              <td></td>
+              <td></td>
+              <td>Total: ${this.props.cart.reduce((c,a) => c+a.product.price,0)}</td>
+            </tr>
           </tbody>
         </table>
       </div>

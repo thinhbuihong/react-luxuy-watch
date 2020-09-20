@@ -89,6 +89,7 @@
 }
 .products .product .product-img{
   text-align: center;
+  cursor: pointer;
 }
 
 /* footer  */
@@ -114,5 +115,30 @@
 }
 .cart button{
   padding: 0.01rem .5rem;
+}
 
+/* product detail  */
+.product-detail-modal{
+  padding: 2rem;
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+.close-modal{
+  float: right;
+  padding: 0.1rem 0.5rem;
+  margin-top: 2rem;
+}
+.close-modal:hover{
+  color: yellow;
+}
+.product-detail-modal button{
+  padding: 0.1rem 0.5rem;
+}
+.product-detail-modal .img{
+  margin-top: 3rem;
+  margin-right: 2rem;
+}
+.product-detail-modal button:hover{
+  color: green;
 }
