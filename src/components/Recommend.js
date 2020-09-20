@@ -7,13 +7,13 @@ export default class Recommend extends Component {
         <div>
           <div className="recommend-products">
             <div className="recommend-product">
-              <img src="./images/abt-1.jpg" alt="recommend product 1" />
+              <img src={require('../images/abt-1.jpg')} alt="recommend product 1" />
             </div>
             <div className="recommend-product">
-              <img src="./images/abt-2.jpg" alt="recommend product 2" />
+              <img src={require("../images/abt-2.jpg")} alt="recommend product 2" />
             </div>
             <div className="recommend-product">
-              <img src="./images/abt-3.jpg" alt="recommend product 3" />
+              <img src={require("../images/abt-3.jpg")} alt="recommend product 3" />
             </div>
           </div>
           <hr />

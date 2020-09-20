@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {NavLink} from 'react-router-dom';
 
 export default class Top extends Component {
   render() {
@@ -7,10 +8,10 @@ export default class Top extends Component {
         <div className="">
           <div className="container">
             <div className="cart-icon">
-              <a href>
-                <img src="./images/cart-1.png" alt="cart" />
-                <p>Empty cart</p>
-              </a>
+              <NavLink exact to="/cart">
+                <i class="fa fa-shopping-cart"></i>
+                <p>Empty Cart</p>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -18,16 +19,16 @@ export default class Top extends Component {
         <div className="menu">
           <ul>
             <li>
-              <a href="asd">Home</a>
+              <NavLink exact to="/" activeClassName="active">Home</NavLink>
             </li>
             <li>
-              <a href="#filter">Products</a>
+              <NavLink exact to="#filter" activeClassName="active">Products</NavLink>
             </li>
             <li>
-              <a href="asd">About</a>
+              <NavLink exact to="/about" activeClassName="active">About</NavLink>
             </li>
             <li>
-              <a href="asd">Contact</a>
+              <NavLink exact to="/contact" activeClassName="active">Contact</NavLink>
             </li>
           </ul>
         </div>

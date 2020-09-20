@@ -44,7 +44,7 @@
   {
     "_id":"7",
     "title":"SMART WATCH7",
-    "image":"./images/p-7.png",
+    "image":"../images/p-7.png",
     "price":234,
     "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam."
   },

@@ -12,7 +12,7 @@ class Product extends Component {
           <h4>{product.title}</h4>
           <span>EXPLORE NOW</span>
           <div>
-            <img src="./images/cart-2.png" alt="cart2" />
+            <i class="fa fa-shopping-cart"></i>
             <span className="price">${product.price}</span>
             <button onClick={this.props.addToCart.bind(this, product)}>Add To Cart</button>
           </div>
