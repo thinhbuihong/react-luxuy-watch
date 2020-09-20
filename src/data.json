@@ -1,0 +1,58 @@
+[
+  {
+    "_id":"1",
+    "title":"SMART WATCH1",
+    "image":"./images/p-1.png",
+    "price":123,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam."
+  },
+  {
+    "_id":"2",
+    "title":"SMART WATCH2",
+    "image":"./images/p-2.png",
+    "price": 35,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam."
+  },
+  {
+    "_id":"3",
+    "title":"SMART WATCH3",
+    "image":"./images/p-3.png",
+    "price":46,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam."
+  },
+  {
+    "_id":"4",
+    "title":"SMART WATCH4",
+    "image":"./images/p-4.png",
+    "price":98,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam."
+  },
+  {
+    "_id":"5",
+    "title":"SMART WATCH5",
+    "image":"./images/p-5.png",
+    "price":13,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam."
+  },
+  {
+    "_id":"6",
+    "title":"SMART WATCH6",
+    "image":"./images/p-6.png",
+    "price":23,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam."
+  },
+  {
+    "_id":"7",
+    "title":"SMART WATCH7",
+    "image":"./images/p-7.png",
+    "price":234,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam."
+  },
+  {
+    "_id":"8",
+    "title":"SMART WATCH8",
+    "image":"./images/p-8.png",
+    "price":63,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae eum adipisci consectetur officiis unde tempora vero molestiae? Libero perspiciatis neque voluptates quidem quo, ad quia rem nobis deleniti. Placeat, totam."
+  }
+]

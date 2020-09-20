@@ -8,7 +8,7 @@
 .top{
   width: 100%;
   height: 4rem;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .container{
   width: 80%;
@@ -36,47 +36,28 @@
 
 /* menu  */
 .menu{
-  margin-top: 1.2rem;
-}
-.left{
-  width: 70%;
-  height: 3.5rem;
-  float: left;
-}
-.left ul{
-  height: 100%;
+  font-size: 1.7rem;
   display: flex;
   align-items: center;
+  height: 100%;
 }
-.left li{
-  list-style: none;
-  margin-right: 2rem;
-  font-size: 1.5rem;
+.menu ul{
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  margin-left: 10rem;
 }
-.left a{
-  color: black;
+.menu li{
+  margin-left: 1.5rem;
+}
+.menu a{
+  color: white;
   text-decoration: none;
 }
-.left a:hover{
+.menu a:hove{
   color: green;
 }
-.right{
-  width: 30%;
-  height: 3.5rem;
-  float: left;
-  margin-top: 0.8rem;
-}
-.right button{
-  width: 2rem;
-  height: 2.2rem;
-}
-#search{
-  padding: 0.5rem;
-}
-.menu::after{
-  content: "";
-  clear: both;
-}
+
 
 .banner img{
   width: 100%;
@@ -90,4 +71,39 @@
 }
 .recommend-products .recommend-product{
   margin-right: 1rem;
+}
+
+/* products  */
+.products{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.products .product{
+  padding: 1.5rem;
+  margin: 0.5rem;
+  border: 1px solid sandybrown;
+}
+.products .product .product-img{
+  text-align: center;
+}
+
+/* footer  */
+.footer{
+  margin: 1.8em auto;
+  border-top: 1px solid gray;
+  padding: 0.3rem;
+}
+.right-footer{
+  margin-left: auto ;
+  text-align: right;
+}
+
+.product button{
+  margin-left: 2.2rem;
+  padding: 0.1rem 0.5rem;
+  border: .1rem solid gray;
 }

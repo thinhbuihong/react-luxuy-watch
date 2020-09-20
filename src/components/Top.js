@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Top extends Component {
   render() {
     return (
-      <div>
-        <div className="top">
+      <div className="sticky-top top">
+        <div className="">
           <div className="container">
             <div className="cart-icon">
               <a href>
@@ -15,10 +15,21 @@ export default class Top extends Component {
           </div>
         </div>
 
-        <div className="logo">
-          <a href="asd">
-            <h1>LUXURY WATCHES</h1>
-          </a>
+        <div className="menu">
+          <ul>
+            <li>
+              <a href="asd">Home</a>
+            </li>
+            <li>
+              <a href="#filter">Products</a>
+            </li>
+            <li>
+              <a href="asd">About</a>
+            </li>
+            <li>
+              <a href="asd">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
     )
