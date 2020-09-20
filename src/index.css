@@ -34,3 +34,60 @@
   text-align: center;
 }
 
+/* menu  */
+.menu{
+  margin-top: 1.2rem;
+}
+.left{
+  width: 70%;
+  height: 3.5rem;
+  float: left;
+}
+.left ul{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.left li{
+  list-style: none;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+}
+.left a{
+  color: black;
+  text-decoration: none;
+}
+.left a:hover{
+  color: green;
+}
+.right{
+  width: 30%;
+  height: 3.5rem;
+  float: left;
+  margin-top: 0.8rem;
+}
+.right button{
+  width: 2rem;
+  height: 2.2rem;
+}
+#search{
+  padding: 0.5rem;
+}
+.menu::after{
+  content: "";
+  clear: both;
+}
+
+.banner img{
+  width: 100%;
+}
+
+/* recommend  */
+.recommend-products{
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.recommend-products .recommend-product{
+  margin-right: 1rem;
+}
