@@ -7,7 +7,7 @@ const store = createStore(
   combineReducers({
     products: productsReducer,
     cart:cartReducer,
-    order: orderReducer,
+    orders: orderReducer,
   }),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )

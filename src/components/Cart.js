@@ -78,7 +78,7 @@ class Cart extends Component {
         </table>
 
         {
-          this.props.cart.length >= 0 ?
+          this.props.cart.length > 0 ?
             (<div>
               <button className="clear-cart" onClick={this.props.clearCart}>Clear Cart</button>
 

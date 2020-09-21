@@ -12,6 +12,7 @@ import NotFound from './NotFound';
 import Contact from './Contact';
 import About from './About';
 import Cart from './Cart';
+import Order from './Order'
 
 export default class App extends Component {
   render() {
@@ -29,6 +30,7 @@ export default class App extends Component {
               <Route path="/about" exact component={About}></Route>
               <Route path="/contact" exact component={Contact}></Route>
               <Route path="/cart" exact component={Cart}></Route>
+              <Route path="/orders" exact component={Order}></Route>
               <Route component={NotFound}></Route>
             </Switch>
 
