@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {NavLink} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import {connect} from 'react-redux';
 
 class Top extends Component {
@@ -29,7 +29,7 @@ class Top extends Component {
               <NavLink exact to="/" activeClassName="active">Home</NavLink>
             </li>
             <li>
-              <NavLink exact to="/" activeClassName="active">Products</NavLink>
+              <Link exact to="/" >Products</Link>
             </li>
             <li>
               <NavLink exact to="/about" activeClassName="active">About</NavLink>

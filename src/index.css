@@ -51,11 +51,8 @@
   margin-left: 1.5rem;
 }
 .menu a{
-  color: white;
+  color:white;
   text-decoration: none;
-}
-.menu a:hove{
-  color: green;
 }
 
 
@@ -141,4 +138,28 @@
 }
 .product-detail-modal button:hover{
   color: green;
+}
+
+.cart .clear-cart{
+  float: right;  
+  margin: 1rem ;
+}
+.order{
+  content: "";
+  clear: both;
+}
+
+.active{
+  color: chocolate !important;
+}
+
+.order{
+  margin: 1rem auto;
+  width: 30%;
+  text-align: center;
+}
+.order .order-button{
+  background-color: yellow;
+  padding: 0.3rem 2rem;
+  border: .1rem solid gray;
 }

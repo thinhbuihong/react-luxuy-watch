@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { removeFromCart } from '../actions/cartActions';
+import {connect} from 'react-redux';
 
-export default class CartItem extends Component {
+class CartItem extends Component {
   render() {
     const {item} = this.props;
     return (
@@ -18,9 +20,19 @@ export default class CartItem extends Component {
           {"$"+item.quantity*item.product.price}
         </td>
         <td>
-          <button>x</button>
+          <button onClick={this.props.removeFromCart.bind(this, item.product)}>x</button>
         </td>
       </tr>
     )
   }
 }
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    removeFromCart: (product) => {
+      dispatch(removeFromCart(product));
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps )(CartItem);
