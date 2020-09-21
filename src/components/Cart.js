@@ -4,6 +4,8 @@ import { clearCart } from '../actions/cartActions';
 import CartItem from './CartItem';
 import Modal from 'react-modal';
 import Zoom from 'react-reveal/Zoom';
+import shortid from 'shortid';
+import { createOrder } from '../actions/orderActions';
 
 class Cart extends Component {
   constructor(props) {
@@ -18,6 +20,21 @@ class Cart extends Component {
   handleOrder = (event) => {
     event.preventDefault();
     const { email, name, address } = this.state;
+    if(email && name && address){
+      const order ={
+        name,email,address,
+        _id:shortid.generate(),
+        cart:this.props.cart,
+      }
+      this.props.createOrder(order);
+
+      alert("Successfully");
+      this.props.clearCart();
+      this.closeOrderModal();
+    }
+    else{
+      alert("Fill in full information");
+    }
 
   }
   isChange = (event) => {
@@ -81,15 +98,15 @@ class Cart extends Component {
                     <h2>ORDER FORM</h2>
                     <div>
                       <label>Name: </label>
-                      <input type="text" name="name" required></input>
+                      <input type="text" name="name" required onChange={this.isChange}></input>
                     </div>
                     <div>
                       <label>Email: </label>
-                      <input type="email" name="email" required></input>
+                      <input type="email" name="email" required onChange={this.isChange}></input>
                     </div>
                     <div>
                       <label>Address: </label>
-                      <input type="text" name="adress" required></input>
+                      <input type="text" name="address" required onChange={this.isChange}></input>
 
                     </div>
                     <button type="submit" onClick={this.handleOrder}>Order</button>
@@ -113,6 +130,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     clearCart: () => {
       dispatch(clearCart());
+    },
+    createOrder:(order)=>{
+      dispatch(createOrder(order));
     }
   }
 }
