@@ -51,7 +51,8 @@ class Product extends Component {
                     <h4>{product.title}</h4>
                     <p>{product.description}</p>
                     <h4>${product.price}</h4>
-                    <button onClick={this.props.addToCart.bind(this, product)}>
+                    <button onClick={()=>{this.props.addToCart(product);
+                                          this.closeModal()}}>
                       AddToCart
                     </button>
                   </div>

@@ -125,6 +125,7 @@
   float: right;
   padding: 0.1rem 0.5rem;
   margin-top: 2rem;
+  margin-right: 1rem;
 }
 .close-modal:hover{
   color: yellow;
@@ -161,5 +162,35 @@
 .order .order-button{
   background-color: yellow;
   padding: 0.3rem 2rem;
+  border: .1rem solid gray;
+}
+
+/* order modal  */
+.order-form{
+  width: 30vw;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid gray; */
+  padding: 1rem;
+}
+.order-form div{
+  margin: 0.5em 0;
+}
+.order-form-modal{
+  background-color: rgb(229, 226, 182);
+  z-index: 99;
+  width: 40%;
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+}
+.order-form-modal .close-order-modal{
+  padding: .1rem .5rem;
+  position: absolute; 
+  right: 0.5rem;
+  top: 0.5rem;
   border: .1rem solid gray;
 }

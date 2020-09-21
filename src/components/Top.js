@@ -29,7 +29,7 @@ class Top extends Component {
               <NavLink exact to="/" activeClassName="active">Home</NavLink>
             </li>
             <li>
-              <Link exact to="/" >Products</Link>
+              <Link exact="true" to="/" >Products</Link>
             </li>
             <li>
               <NavLink exact to="/about" activeClassName="active">About</NavLink>
