@@ -20,7 +20,7 @@ class Products extends Component {
           {
             products ? (
               products.map(product => (
-                <Fade bottom cascase={true} key={product._id}>
+                <Fade bottom key={product._id}>
                   <Product product={product}></Product>
                 </Fade>
               ))

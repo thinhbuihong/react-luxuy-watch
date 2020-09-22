@@ -3,39 +3,30 @@ import React, { Component } from 'react'
 export default class OrderItem extends Component {
   constructor(props) {
     super(props);
-    this.state={
-      showOrder:false,
+    this.state = {
+      showOrder: false,
     }
   }
-  
-  toggleShowOrder = () =>{
+
+  toggleShowOrder = () => {
     this.setState({
       showOrder: !this.state.showOrder,
     })
   }
   render() {
-    const {order} = this.props;
+    const { order } = this.props;
     return (
-      <div>
-        <div className="order-name" onClick={this.toggleShowOrder}>
-          <strong>
-            {`${order.name} --- ${order.email}`}
-          </strong>
-        </div>
+      <tr className="order-item" onClick={this.toggleShowOrder}>
+        <td>{order._id}</td>
+        <td>{
+          "$" + order.cart.reduce((c, a) => c + a.quantity * a.product.price, 0)
+        }</td>
+        <td>{order.name}</td>
+        <td>{order.email}</td>
+        <td>{order.address}</td>
+      </tr>
 
-        {
-          this.state.showOrder && 
-          (<div className="order-items">
-            {
-              order.cart.map(item=>(
-                <div key={item.product._id} className="order-item">
-                  {`${item.product.title}   X ${item.quantity}  $${item.product.price*item.quantity}`}
-                </div>
-              ))
-            }
-          </div>)
-        }
-      </div>
+
     )
   }
 }
