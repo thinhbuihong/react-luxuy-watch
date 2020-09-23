@@ -4,7 +4,7 @@ export default class Recommend extends Component {
   render() {
     return (
       <div>
-        <div>
+        <div className="container-fluid">
           <div className="recommend-products">
             <div className="recommend-product">
               <img src={require('../images/abt-1.jpg')} alt="recommend product 1" />

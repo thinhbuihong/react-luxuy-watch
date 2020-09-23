@@ -19,7 +19,7 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div>
+          <div className="container-fluid">
             <Top></Top>
             <Logo></Logo>
             <Banner></Banner>
