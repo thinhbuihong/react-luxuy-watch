@@ -31,6 +31,7 @@ class Cart extends Component {
       alert("Successfully");
       this.props.clearCart();
       this.closeOrderModal();
+      window.location.assign("/");
     }
     else{
       alert("Fill in full information");

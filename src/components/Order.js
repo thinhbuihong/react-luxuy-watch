@@ -46,7 +46,7 @@ class Order extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-          orders: state.orders,
+     orders: state.orders,
   }
 }
 export default connect(mapStateToProps)(Order);
