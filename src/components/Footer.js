@@ -7,6 +7,12 @@ export default class Footer extends Component {
 
         <div className="right-footer">
           © Copy right: thinh dep zai
+          <div>
+            <a href="https://github.com/thinhbuihong/react-luxuy-watch">
+              https://github.com/thinhbuihong/react-luxuy-watch
+            </a>
+
+          </div>
         </div>
       </div>
 
