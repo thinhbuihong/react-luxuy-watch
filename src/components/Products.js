@@ -9,19 +9,18 @@ class Products extends Component {
   componentDidMount() {
     this.props.fetchProducts();
   }
-
   render() {
     const { products } = this.props;
+    const {url} = this.props.match;
     return (
       <div>
-        <Filter>
-        </Filter>
+        <Filter></Filter>
         <div className="products" id="products">
           {
             products ? (
               products.map(product => (
                 <Fade bottom key={product._id}>
-                  <Product product={product}></Product>
+                  <Product product={product} url={url}></Product>
                 </Fade>
               ))
             ) : (<div>Loading ...</div>)

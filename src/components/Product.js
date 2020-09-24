@@ -1,32 +1,51 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { addToCart } from '../actions/cartActions';
-import Modal from 'react-modal';
-import Zoom from 'react-reveal/Zoom';
+import { Link } from 'react-router-dom';
 
 class Product extends Component {
   constructor(props) {
     super(props);
-    this.state={
-      showModal:false,
+    this.state = {
+      showModal: false,
     }
   }
-  closeModal = () =>{
-    this.setState({
-      showModal:false,
-    })
-  }
-  openModal = () =>{
-    this.setState({
-      showModal:true,
-    })
+
+  to_slug = (str) => {
+    str = str.toLowerCase();
+
+    str = str.replace(/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/g, 'a');
+    str = str.replace(/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/g, 'e');
+    str = str.replace(/(ì|í|ị|ỉ|ĩ)/g, 'i');
+    str = str.replace(/(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)/g, 'o');
+    str = str.replace(/(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)/g, 'u');
+    str = str.replace(/(ỳ|ý|ỵ|ỷ|ỹ)/g, 'y');
+    str = str.replace(/(đ)/g, 'd');
+
+    str = str.replace(/([^0-9a-z-\s])/g, '');
+
+    str = str.replace(/(\s+)/g, '-');
+
+    str = str.replace(/^-+/g, '');
+
+    str = str.replace(/-+$/g, '');
+
+    return str;
   }
   render() {
-    const {product} = this.props;
+    const { product, url } = this.props;
+    // console.log(this.to_slug(product.title))
     return (
       <div className="product">
-        <div className="product-img" onClick={this.openModal}>
-        <img src={product.image} alt={product.title} /></div>
+        <Link to={
+          {
+            pathname: url + 'products/' + this.to_slug(product.title),
+            product,
+          }} exact >
+          <div className="product-img" >
+            <img src={product.image} alt={product.title} />
+          </div>
+        </Link>
         <div className="product-detail">
           <h4>{product.title}</h4>
           <span>EXPLORE NOW</span>
@@ -36,31 +55,6 @@ class Product extends Component {
             <button onClick={this.props.addToCart.bind(this, product)}>Add To Cart</button>
           </div>
         </div>
-
-        {
-          this.state.showModal && (
-            <Modal onRequestClose={this.closeModal} isOpen={true}>
-              <Zoom>
-                <button className="close-modal" onClick={this.closeModal}>X</button>
-                <div className="product-detail-modal">
-                  <div className="img">
-                    <img src={product.image} alt={product.title}></img>
-                  </div>
-                  <div className="detail">
-                    <h2>Product detail</h2>
-                    <h4>{product.title}</h4>
-                    <p>{product.description}</p>
-                    <h4>${product.price}</h4>
-                    <button onClick={()=>{this.props.addToCart(product);
-                                          this.closeModal()}}>
-                      AddToCart
-                    </button>
-                  </div>
-                </div>
-              </Zoom>
-            </Modal>
-          )
-        }
       </div>
     )
   }
@@ -74,4 +68,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-export default connect(null, mapDispatchToProps )(Product);
+export default connect(null, mapDispatchToProps)(Product);
