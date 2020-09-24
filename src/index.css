@@ -236,7 +236,12 @@ tbody > tr:nth-child(odd) {
 #filter{
   display: flex;
 }
-
+.not-found{
+  text-align: center;
+}
+.not-found .img404{
+  width: 50%;
+}
 @media screen and (max-width: 900px) {
   .container-top .menu a{
     color: black ;
