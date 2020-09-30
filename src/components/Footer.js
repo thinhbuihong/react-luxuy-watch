@@ -9,7 +9,7 @@ export default class Footer extends Component {
           © Copy right: thinh dep zai
           <div>
             <a href="https://github.com/thinhbuihong/react-luxuy-watch">
-              https://github.com/thinhbuihong/react-luxuy-watch
+              <i className="fa fab fa-github">Github</i>
             </a>
 
           </div>

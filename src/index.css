@@ -137,15 +137,11 @@
   display: flex;
   width: 70%;
   margin: auto;
+  align-items: center;
+  justify-content: center;
 }
-.close-modal{
-  float: right;
-  padding: 0.1rem 0.5rem;
-  margin-top: 2rem;
-  margin-right: 1rem;
-}
-.close-modal:hover{
-  color: yellow;
+.clear{
+  clear: both;
 }
 .product-detail-modal button{
   padding: 0.1rem 0.5rem;
@@ -153,6 +149,7 @@
 .product-detail-modal .img{
   margin-top: 3rem;
   margin-right: 2rem;
+  float: left;
 }
 .product-detail-modal button:hover{
   color: green;
@@ -231,7 +228,9 @@
 tbody > tr:nth-child(odd) {
   background-color: #f0f0f0;
 }
-
+.footer a{
+  font-size: 1.5rem;
+}
 /* filter  */
 #filter{
   display: flex;
@@ -258,4 +257,9 @@ tbody > tr:nth-child(odd) {
     -o-border-radius: .5rem;
     width: 20vw;
 }
+}
+@media screen and (max-width:400px){
+  .product-detail-modal{
+    display: block;
+  }
 }
