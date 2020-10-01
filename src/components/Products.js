@@ -11,7 +11,7 @@ class Products extends Component {
   }
   render() {
     const { products } = this.props;
-    const {url} = this.props.match;
+    const { url } = this.props.match;
     return (
       <div>
         <Filter></Filter>

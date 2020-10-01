@@ -22,16 +22,16 @@ const cartReducer = (state= initialState, action)=>{
     // remove from cart 
     case REMOVE_FROM_CART:
       const productRemove = action.payload.product;
-      localStorage.setItem("cart", JSON.stringify(state));
-      return state.slice().filter(item=> item.product._id !== productRemove._id);
+      const newState = state.slice().filter(item=> item.product._id !== productRemove._id);
+      localStorage.setItem("cart", JSON.stringify(newState));
+      return newState;
     
     //clear cart
     case CLEAR_CART:
-      localStorage.setItem("cart", JSON.stringify(state));
+      localStorage.setItem("cart", "[]");
       return [];
     
     default:
-      localStorage.setItem("cart", JSON.stringify(state));
       return [...state];
   }
 }

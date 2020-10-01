@@ -1,10 +1,14 @@
-import { FETCH_PRODUCTS, SEARCH_PRODUCTS, SORT_PRODUCTS } from "../constants/actionTypes"
+import { FETCH_PRODUCTS, FILTER_PRODUCTS, SORT_PRODUCTS } from "../constants/actionTypes"
+import callApi from "../utils/apiCaller"
 
-export const fetchProducts = ()=>{
-  return {
-    type: FETCH_PRODUCTS,
-  }
+export const fetchProducts = ()=> async (dispatch)=>{
+  const res = await callApi('products')();
+  dispatch({
+    type:FETCH_PRODUCTS,
+    products:res.data
+  })
 }
+  
 
 export const sortProducts=(order)=>{
   return {
@@ -15,11 +19,12 @@ export const sortProducts=(order)=>{
   }
 }
 
-export const searchProducts = (temp) =>{
-  return {
-    type:SEARCH_PRODUCTS,
-    payload:{
-      temp
-    }
-  }
+export const filterProducts = (temp) => async (dispatch)=>{
+  const res= await callApi('products')();
+  dispatch({
+    type: FILTER_PRODUCTS,
+    products: res.data.filter((product) =>{
+      return product.title.includes(temp);
+    })
+  })
 }

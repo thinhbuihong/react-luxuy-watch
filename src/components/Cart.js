@@ -17,23 +17,24 @@ class Cart extends Component {
       order: false,
     }
   }
-  handleOrder = (event) => {
+  handleOrder = async (event) => {
     event.preventDefault();
     const { email, name, address } = this.state;
-    if(email && name && address){
-      const order ={
-        name,email,address,
-        _id:shortid.generate(),
-        cart:this.props.cart,
+    if (email && name && address) {
+      const order = {
+        name, email, address,
+        _id: shortid.generate(),
+        cart: this.props.cart,
       }
-      this.props.createOrder(order);
-
+      await this.props.createOrder(order);
       alert("Successfully");
       this.props.clearCart();
       this.closeOrderModal();
       window.location.assign("/");
+
+
     }
-    else{
+    else {
       alert("Fill in full information");
     }
 
@@ -127,15 +128,6 @@ const mapStateToProps = (state, ownProps) => {
     cart: state.cart
   }
 }
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    clearCart: () => {
-      dispatch(clearCart());
-    },
-    createOrder:(order)=>{
-      dispatch(createOrder(order));
-    }
-  }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+
+export default connect(mapStateToProps, { clearCart, createOrder })(Cart);
