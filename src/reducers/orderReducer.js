@@ -1,15 +1,14 @@
-const { CREATE_ORDER } = require("../constants/actionTypes");
+const { CREATE_ORDER, FETCH_ORDERS } = require("../constants/actionTypes");
 
-const initialState = JSON.parse(localStorage.getItem("orders")) || [];
-const orderReducer = (state=initialState, action) =>{
+const orderReducer = (state=[], action) =>{
   switch(action.type){
     case CREATE_ORDER:
-      state.push(action.payload.order);
-      localStorage.setItem("orders", JSON.stringify(state));
       return[...state];
 
+    case FETCH_ORDERS:
+      return action.orders
+
     default:
-      localStorage.setItem("orders", JSON.stringify(state));
       return [...state];
   }
 }

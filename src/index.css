@@ -10,6 +10,9 @@
   height: 4rem;
   background-color: rgba(0,0,0,0.7);  
 }
+.top a:hover{
+  cursor: pointer;
+}
 .bar{
   color: white;
 }

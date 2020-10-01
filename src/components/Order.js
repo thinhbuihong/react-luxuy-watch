@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import OrderItem from './OrderItem';
 import Fade from 'react-reveal/Fade';
+import { fetchOrders } from '../actions/orderActions';
 
 class Order extends Component {
+  componentDidMount() {
+    this.props.fetchOrders();
+  }
+  
   render() {
     const { orders } = this.props;
     return (
@@ -49,4 +54,4 @@ const mapStateToProps = (state, ownProps) => {
      orders: state.orders,
   }
 }
-export default connect(mapStateToProps)(Order);
+export default connect(mapStateToProps, {fetchOrders})(Order);

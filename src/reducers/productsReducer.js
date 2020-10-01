@@ -1,10 +1,10 @@
-import { FETCH_PRODUCTS, SEARCH_PRODUCTS, SORT_PRODUCTS } from "../constants/actionTypes";
-import data from '../data.json';
+import { FETCH_PRODUCTS, FILTER_PRODUCTS, SORT_PRODUCTS } from "../constants/actionTypes";
+
 
 const productsReducer= (state=[], action)=>{
   switch(action.type){
     case FETCH_PRODUCTS:
-      return data
+      return action.products
 
     case SORT_PRODUCTS:
       state.sort((a,b)=> {
@@ -13,10 +13,8 @@ const productsReducer= (state=[], action)=>{
       })
       return [...state];
     
-    case SEARCH_PRODUCTS:
-      return data.filter((product) =>{
-        return product.title.includes(action.payload.temp);
-      });
+    case FILTER_PRODUCTS:
+      return action.products;
 
     default:
       return [...state];

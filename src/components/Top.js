@@ -16,13 +16,13 @@ class Top extends Component {
             <div className="menu collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
-                  <NavLink exact to="/" activeClassName="active" classNam="nav-link">Home</NavLink>
+                  <NavLink exact to="/" activeClassName="active" >Home</NavLink>
                 </li>
                 <li>
                   <Link exact="true" to="/" >Products</Link>
                 </li>
                 <li>
-                  <NavLink exact to="/about" activeClassName="active">About</NavLink>
+                  <NavLink exact to="/about" activeClassName="active" >About</NavLink>
                 </li>
                 <li>
                   <NavLink exact to="/contact" activeClassName="active">Contact</NavLink>
